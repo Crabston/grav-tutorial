@@ -91,6 +91,10 @@ git:
         url: https://github.com/getgrav/grav-plugin-shortcode-core
         path: user/plugins/shortcode-core
         branch: master
+    shortcode-gallery-plusplus:
+        url: https://github.com/sal0max/grav-plugin-shortcode-gallery-plusplus
+        path: user/plugins/shortcode-gallery-plusplus
+        branch: master
     shortcode-ui:
         url: https://github.com/getgrav/grav-plugin-shortcode-ui
         path: user/plugins/shortcode-ui
