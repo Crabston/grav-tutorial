@@ -4,8 +4,8 @@ slug: werbung-und-tracker-entfernen
 sitemap:
   changefreq: yearly
   priority: 0.5
-  lastmod: 11-12-2025
-date: 11-12-2025
+  lastmod: 17-02-2026
+date: 17-02-2026
 taxonomy:
   category: Datenschutz & Sicherheit
   tag: [ Anleitung, Datenschutz, Sicherheit ]
@@ -25,7 +25,7 @@ Werbung und Tracker sind allgegenwärtig im Internet und auf vielen Geräten. Si
 Es gibt verschiedene Methoden, um Werbung und Tracker zu entfernen. Nicht alle sind gleich effektiv oder einfach zu implementieren. Die Mischung aus mehreren Methoden bietet oft den besten Schutz und die beste Nutzererfahrung.
 
 Hier sind einige der effektivsten Methoden, die wir empfehlen und selbst verwenden:
-1. **Firewall**: Eine Firewall überwacht und kontrolliert den ein- und ausgehenden Netzwerkverkehr basierend auf vordefinierten Sicherheitsregeln. Diese ist meist nur in Firmennetzwerken zu finden und weniger für den Heimgebrauch geeignet.
+1. **Next-Gen Firewall**: Eine Next Generation Firewall überwacht und kontrolliert den ein- und ausgehenden Netzwerkverkehr basierend auf vordefinierten Sicherheitsregeln. Diese ist meist nur in Firmennetzwerken zu finden und weniger für den Heimgebrauch geeignet.
 2. **DNS Filter verwenden**: Ein DNS Filter wie NextDNS kann Werbung und Tracker auf Netzwerkebene blockieren. Dies bedeutet, dass alle Geräte in deinem Netzwerk von diesem Schutz profitieren, ohne dass du auf jedem Gerät einzelne Einstellungen vornehmen musst.
 3. **spezieller Browser**: Verwende einen datenschutzorientierten Browser wie Brave, der integrierte Werbe- und Tracker-Blocker bietet. Dies verbessert dein Surferlebnis erheblich.
 4. **Browser-Erweiterungen**: Ergänze deinen Browser mit Erweiterungen wie uBlock Origin, um zusätzliche Schutzebenen gegen Werbung und Tracker hinzuzufügen.
@@ -69,10 +69,16 @@ Die Einrichtung von NextDNS auf Router Ebene stellt sicher, dass alle Geräte in
 
 #### Swisscom Router
 Wir zeigen in diesem Abschnitt die Einrichtung auf einem Swisscom Router:
-1. Melde dich bei der Weboberfläche deines Routers an (normalerweise über [192.168.1.1](http://192.168.1.1/))
+1. Melde dich bei der Weboberfläche deines Routers an (normalerweise über [192.168.1.1](http://192.168.1.1/)). Die Zugangsdaten findest du oft auf der Rückseite des Routers.
+   - Falls `192.168.1.1` nicht funktioniert, suche in den Netzwerkeinstellungen deines Computers oder Handys nach der Standardgateway-Adresse, um die richtige IP Adresse für deinen Router zu finden.
+2. Aktiviere den Expertenmodus, um Zugriff auf erweiterte Einstellungen zu erhalten. ![Screenshot Swisscom Router Expertenmodus](swisscom-router-1.png?lightbox)
+3. Navigiere zu "Netzwerk > Einstellungen > IP Einstellungen" und scrolle zu DNS Server. ![Screenshot Swisscom Router DNS Einstellungen](swisscom-router-2.png?lightbox)
+   1. Wähle die Option "Manuell" aus, um benutzerdefinierte DNS Server Adressen einzugeben.
+   2. Gib die DNS Server Adressen aus deiner NextDNS Konfiguration ein
+   3. Lasse die Option "DNS Cache der Internetbox" aktiviert, damit die DNS Anfragen zwischengespeichert werden und dein Surferlebnis schneller wird.
+   4. Speichere die Einstellungen und lösche den DNS Cache auf dem Router, damit die neuen DNS Server Adressen sofort verwendet werden.
 
-\# TODO
-<!-- TODO -->
+!!!! Neue DNS Anfragen werden nun über NextDNS geleitet und Werbung sowie Tracker werden blockiert, solange deine Geräte mit dem Router verbunden sind und die DNS Server Adressen nicht manuell überschrieben wurden zB durch die Netzwerkeinstellungen auf den Geräten.
 
 #### TP Link Router
 Wir zeigen in diesem Abschnitt die Einrichtung auf einem TP Link mobile Router:
@@ -91,7 +97,7 @@ Wir zeigen in diesem Abschnitt die Einrichtung auf einem TP Link mobile Router:
 ![Screenshot TP Link Deco App](tp-link-deco-app-5.png)
 [/gallery]
 
-!!!! Die DNS Abfragen werden nun über NextDNS geleitet und Werbung sowie Tracker werden blockiert, solange dein Gerät mit dem Deco Netzwerk verbunden ist und die DNS Server Adressen nicht manuell überschrieben wurden zB durch 
+!!!! Die DNS Abfragen werden nun über NextDNS geleitet und Werbung sowie Tracker werden blockiert, solange dein Gerät mit dem Deco Netzwerk verbunden ist und die DNS Server Adressen nicht manuell überschrieben wurden zB durch die Netzwerkeinstellungen auf den Geräten.
 
 ### NextDNS auf Android Smartphone einrichten
 Um NextDNS auf einem Android Smartphone einzurichten, folge diesen Schritten:
